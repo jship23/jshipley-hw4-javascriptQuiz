@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Quiz</title>
+    <title>Random Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href = "style.css">
-    <link rel="javascript" href = "script.js">
+    
+    
 </head>
 <body>
-    <div>
-        <h1>Coding Quiz!</h1>
-        <p>The following quiz will test your knowledge on JavaScript. Click the button below to begin.</p>
+    <p>time: <span id = "timer">3:00</span></p>
+    <div class="body">
+        <div class="head">
+            <h1>Sci-Fi & Fantasy Novels Quiz!</h1>
+            <p>The following quiz will test your knowledge on popular sci-fi and fantasy novels. Click the button below to begin.</p>
+        </div>
+        <div class ="text-center">
+            <button class = "btn">Answer 1</button>
+            <button class = "btn">Answer 2</button>
+            <button class = "btn">Answer 3</button>
+            <button class = "btn">Answer 4</button>
+        </div>
+        <div class="text-center">
+            <button id = "start-btn">Start</button>
+            <button id = "next-btn" class = "hide">Next</button>
+        </div>
     </div>
-    <div>
-        <button id ="btn-begin">Begin Quiz</button>
-    </div>
-    
+    <script src = "script.js"></script>>
+
 </body>
 </html>
