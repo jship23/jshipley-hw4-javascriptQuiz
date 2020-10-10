@@ -28,38 +28,44 @@ var questions = [
 ]
 
 // set variables
-var question = document.getElementById("question");
-var answer1 = document.getElementById("btn1");
-var answer2 = document.getElementById("btn2");
-var answer3 = document.getElementById("btn3");
-var answer4 = document.getElementById("btn4");
-var initials = document.getElementById("initials");
-
-var highScore = document.getElementById("high-score");
+var headEl = document.querySelector(".head");
+var next = document.getElementById("next-btn");
 var startBtn = document.getElementById("start-btn");
-startBtn.addEventListener("click", startGame);
+var buttonEl = document.createElement("button");
+var containerEl = document.getElementsByClassName("container")
 
-//start game
-function startGame() {
-console.log("started")
-window.location.replace("quiz.html")
+startBtn.addEventListener("click",startQuiz);
 
+//start quiz
+function startQuiz() {
+    
+    headEl.innerHTML = questions[0].question;
+    containerEl.append(headEl)
+    console.log(questions[0].question)
+ 
+    
+    for(var i = 0; i < questions[0].choices.length; i++) {
+        buttonEl.innerText = questions[0].choices[i];
+        console.log(questions[0].choices[i]);
+        var buttonEl = document.createElement("button");
+        buttonEl.classList.add("answer-button");
+        headEl.append(buttonEl);
+        }
+      
 };
 
-//render questions
-function getQuestion(){
-  
-}
-
-//Next question
-function nextQuestion() {
 
 
-}
 
 //select answer
 function selectAnswer() {
 
+}
+
+
+//Next question
+function nextQuestion() {
 
 }
+
 
